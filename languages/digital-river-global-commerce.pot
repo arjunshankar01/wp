@@ -324,7 +324,7 @@ msgstr ""
 msgid "Estimated VAT"
 msgstr ""
 
-#: public/class-drgc-public.php:116, public/templates/thank-you/thank-you-summary.php:45
+#: public/class-drgc-public.php:116, public/templates/thank-you/thank-you-summary.php:45, public/templates/checkout/checkout-summary.php:71
 msgid "Tax"
 msgstr ""
 
@@ -338,6 +338,26 @@ msgstr ""
 
 #: public/class-drgc-public.php:119, public/templates/cart/cart-summary.php:47, public/templates/checkout/checkout-summary.php:44
 msgid "Estimated Shipping"
+msgstr ""
+
+#: public/class-drgc-public.php:168, public/templates/cart/cart-summary.php:88
+msgid "Estimated VAT Included"
+msgstr ""
+
+#: public/class-drgc-public.php:170, public/templates/cart/cart-summary.php:104, public/templates/checkout/checkout-summary.php:44
+msgid "Estimated Shipping VAT"
+msgstr ""
+
+#: public/class-drgc-public.php:169, public/templates/cart/cart-summary.php:104, public/templates/checkout/checkout-summary.php:44
+msgid "Estimated Shipping Tax"
+msgstr ""
+
+#: public/class-drgc-public.php:170, public/templates/cart/cart-summary.php:104, public/templates/checkout/checkout-summary.php:88
+msgid "Shipping VAT"
+msgstr ""
+
+#: public/class-drgc-public.php:169, public/templates/cart/cart-summary.php:104, public/templates/checkout/checkout-summary.php:88
+msgid "Shipping Tax"
 msgstr ""
 
 #: public/class-drgc-public.php:120
@@ -624,8 +644,12 @@ msgstr ""
 msgid "Subtotal"
 msgstr ""
 
-#: public/templates/cart/cart-summary.php:54
+#: public/templates/cart/cart-summary.php:57
 msgid "Add Promo Code"
+msgstr ""
+
+#: public/templates/cart/cart-summary.php:98
+msgid "Order Total"
 msgstr ""
 
 #: public/templates/cart/cart-summary.php:56

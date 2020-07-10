@@ -1486,13 +1486,13 @@ input[type=number] { -webkit-appearance: textfield; -moz-appearance: textfield; 
 
 .dr-summary { display: inline-block; width: 100%; height: 100%; }
 
-.dr-summary--cart .dr-summary__shipping { padding: 20px 0; border-top: 1px dashed #d1d1d1; border-bottom: 1px solid #d1d1d1; }
+.dr-summary--cart .dr-summary__shipping, .dr-summary--cart .dr-summary__shipping_tax { padding: 20px 0; border-top: 1px dashed #d1d1d1; border-bottom: 1px solid #d1d1d1; }
 
 .dr-summary--checkout, .dr-summary--thank-you { width: 100%; margin-bottom: 16px; padding: 20px; float: right; background-color: #ffffff; }
 
 .dr-summary--checkout .dr-summary__subtotal, .dr-summary--thank-you .dr-summary__subtotal { margin-bottom: 24px; padding: 0 24px; }
 
-.dr-summary--checkout .dr-summary__shipping, .dr-summary--checkout .dr-summary__tax, .dr-summary--checkout .dr-summary__discount, .dr-summary--thank-you .dr-summary__shipping, .dr-summary--thank-you .dr-summary__tax, .dr-summary--thank-you .dr-summary__discount { padding: 0 24px; }
+.dr-summary--checkout .dr-summary__shipping, .dr-summary--checkout .dr-summary__tax, .dr-summary--checkout .dr-summary__discount, .dr-summary--thank-you .dr-summary__shipping, .dr-summary--thank-you .dr-summary__tax, .dr-summary--thank-you .dr-summary__discount, .dr-summary--checkout .dr-summary__shipping_tax { padding: 0 24px; }
 
 .dr-summary--checkout .dr-summary__total, .dr-summary--thank-you .dr-summary__total { margin-bottom: 0; margin-top: 24px; padding: 24px 24px; background-color: #f7f7f7; }
 
@@ -1520,15 +1520,21 @@ input[type=number] { -webkit-appearance: textfield; -moz-appearance: textfield; 
 
 .dr-summary__proceed-checkout { margin: 32px 0; text-transform: uppercase; }
 
-.dr-summary__shipping, .dr-summary__subtotal, .dr-summary__discounted-subtotal, .dr-summary__savings, .dr-summary__delivery, .dr-summary__tax, .dr-summary__discount, .dr-summary__total { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 16px; -webkit-print-color-adjust: exact; }
+.dr-summary__shipping, .dr-summary__subtotal, .dr-summary__discounted-subtotal, .dr-summary__savings, .dr-summary__delivery, .dr-summary__tax, .dr-summary__discount, .dr-summary__total, .dr-summary__shipping_tax { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 16px; -webkit-print-color-adjust: exact; }
 
-@media (min-width: 1200px) { .dr-summary__shipping, .dr-summary__subtotal, .dr-summary__discounted-subtotal, .dr-summary__savings, .dr-summary__delivery, .dr-summary__tax, .dr-summary__discount, .dr-summary__total { margin-bottom: 24px; } }
+@media (min-width: 1200px) { .dr-summary__shipping, .dr-summary__subtotal, .dr-summary__discounted-subtotal, .dr-summary__savings, .dr-summary__delivery, .dr-summary__tax, .dr-summary__discount, .dr-summary__total, .dr-summary__shipping_tax { margin-bottom: 24px; } }
 
 .dr-summary__shipping { margin-bottom: 16px; }
 
 .dr-summary__shipping .shipping-label { font-size: 14px; line-height: 16px; color: #000000; margin-bottom: 0; }
 
 .dr-summary__shipping .shipping-value { font-size: 16px; color: #000000; font-weight: 700; line-height: 16px; text-align: right; margin-bottom: 0; }
+
+.dr-summary__shipping_tax { margin-bottom: 16px; }
+
+.dr-summary__shipping_tax .item-label { font-size: 14px; line-height: 16px; color: #000000; margin-bottom: 0; }
+
+.dr-summary__shipping_tax .item-value { font-size: 16px; color: #000000; font-weight: 700; line-height: 16px; text-align: right; margin-bottom: 0; }
 
 .dr-summary__subtotal .subtotal-label, .dr-summary__subtotal .subtotal-value { font-size: 18px; color: #000000; font-weight: 600; line-height: 16px; margin-bottom: 0; }
 

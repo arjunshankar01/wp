@@ -114,9 +114,9 @@ class DRGC_Public {
 			'vat_label'                   => __('VAT', 'digital-river-global-commerce'),
 			'estimated_vat_label'         => __('Estimated VAT', 'digital-river-global-commerce'),
 			'tax_label'              	    => __('Tax', 'digital-river-global-commerce'),
-			'estimated_tax_label'         => __('Estimated Tax', 'digital-river-global-commerce'),
-			'shipping_label'              => __('Shipping', 'digital-river-global-commerce'),
-			'estimated_shipping_label'    => __('Estimated Shipping', 'digital-river-global-commerce'),
+			'estimated_tax_label'         => __('Estimated Tax', 'digital-river-global-commerce'),			
+			'shipping_label'              => __('Shipping', 'digital-river-global-commerce'),			
+			'estimated_shipping_label'    => __('Estimated Shipping', 'digital-river-global-commerce'),			
 			'credit_card_ending_label'    => __('Credit card ending in', 'digital-river-global-commerce'),
 			'pay_with_card_label'         => __('pay with card', 'digital-river-global-commerce'),
 			'pay_with_paypal_label'       => __('pay with paypal', 'digital-river-global-commerce'),
@@ -164,7 +164,12 @@ class DRGC_Public {
       'invalid_city_msg'               => __('Your city is invalid.', 'digital-river-global-commerce'),
       'invalid_region_msg'             => __('Your region value is invalid. Please supply a different one.', 'digital-river-global-commerce'),
       'upsell_decline_label'           => __('No, thanks', 'digital-river-global-commerce'),
-      'unable_place_order_msg'         => __('Unable to place order', 'digital-river-global-commerce')
+      'unable_place_order_msg'         => __('Unable to place order', 'digital-river-global-commerce'),
+			'estimated_vat_included_label'=> __('Estimated VAT Included', 'digital-river-global-commerce'),
+			'shipping_vat_label'          => __('Shipping VAT', 'digital-river-global-commerce'),
+			'shipping_tax_label'          => __('Shipping Tax', 'digital-river-global-commerce'),
+			'estimated_shipping_tax_label'=> __('Estimated Shipping Tax', 'digital-river-global-commerce'),
+			'estimated_shipping_vat_label'=> __('Estimated Shipping VAT', 'digital-river-global-commerce')
 		);
 
 		// transfer drgc options from PHP to JS

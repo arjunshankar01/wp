@@ -12902,7 +12902,7 @@ var CartModule = function ($) {
     };
   }();
 
-  var getCorrectSubtotalWithDiscount = function getCorrectSubtotalWithDiscount(pricing) {
+  var getCorrectSubtotal = function getCorrectSubtotal(pricing) {
     var localeCode = $('.dr-currency-select').find('option:selected').data('locale').replace('_', '-');
     var currencySymbol = pricing.formattedSubtotal.replace(/\d+/g, '').replace(/[,.]/g, '');
     var symbolAsPrefix = pricing.formattedSubtotal.indexOf(currencySymbol) === 0;
@@ -12923,9 +12923,12 @@ var CartModule = function ($) {
     var $discountRow = $('.dr-summary__discount');
     var $shippingRow = $('.dr-summary__shipping');
     var $subtotalRow = $('.dr-summary__discounted-subtotal');
+	var $orderRow = $('.dr-summary__subtotal');
     $discountRow.find('.discount-value').text("-".concat(pricing.formattedDiscount));
     $shippingRow.find('.shipping-value').text(pricing.shippingAndHandling.value === 0 ? localizedText.free_label : pricing.formattedShippingAndHandling);
-    $subtotalRow.find('.discounted-subtotal-value').text(pricing.subtotalWithDiscount.value > pricing.subtotal.value ? getCorrectSubtotalWithDiscount(pricing) : pricing.formattedSubtotalWithDiscount);
+    $subtotalRow.find('.discounted-subtotal-value').text(pricing.formattedSubtotal);
+	$orderRow.find('.subtotal-value').text(pricing.formattedOrderTotal);
+	// Add logic here to get the produt tax and shipping tax. Ideally all this logic should reside on the server side and not handled via JS
     if (pricing.discount.value) $discountRow.show();else $discountRow.hide();
     if (hasPhysicalProduct) $shippingRow.show();else $shippingRow.hide();
     return new Promise(function (resolve) {
@@ -13004,7 +13007,7 @@ var CartModule = function ($) {
     disableEditBtnsForBundle: disableEditBtnsForBundle,
     renderSingleLineItem: renderSingleLineItem,
     renderLineItems: renderLineItems,
-    getCorrectSubtotalWithDiscount: getCorrectSubtotalWithDiscount,
+    getCorrectSubtotal: getCorrectSubtotal,
     renderSummary: renderSummary,
     fetchFreshCart: fetchFreshCart,
     updateUpsellCookie: updateUpsellCookie
@@ -13670,9 +13673,11 @@ var CheckoutModule = function ($) {
     if ($('.dr-checkout__payment').hasClass('active') || $('.dr-checkout__confirmation').hasClass('active')) {
       $('.dr-summary__tax .item-label').text(shouldDisplayVat() ? localizedText.vat_label : localizedText.tax_label);
       $('.dr-summary__shipping .item-label').text(localizedText.shipping_label);
+	  $('.dr-summary__shipping_tax .item-label').text(shouldDisplayVat() ? localizedText.shipping_vat_label : localizedText.shipping_tax_label);
     } else {
-      $('.dr-summary__tax .item-label').text(shouldDisplayVat() ? localizedText.estimated_vat_label : localizedText.estimated_tax_label);
+      $('.dr-summary__tax .item-label').text(shouldDisplayVat() ? localizedText.estimated_vat_included_label : localizedText.estimated_tax_label);
       $('.dr-summary__shipping .item-label').text(localizedText.estimated_shipping_label);
+	  $('.dr-summary__shipping_tax .item-label').text(shouldDisplayVat() ? localizedText.estimated_shipping_vat_label : localizedText.estimated_shipping_tax_label);
     }
   };
 
