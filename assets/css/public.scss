@@ -1,0 +1,453 @@
+/* Variables
+------------------------------------------------------------------------*/
+$bs-breakpoints: (
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+)   !default;
+
+$brand-colors: (
+    #00a7e1,
+    #003058
+)   !default;
+
+/* CSS Reset
+------------------------------------------------------------------------*/
+iframe {
+    width: 1px;
+    min-width: 100%; /* workaround for iOS */
+    border: none;
+}
+
+/* Common
+------------------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+.hide{display:none;}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: '';
+}
+.clearfix:after {
+    clear: both;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.no-spinners {
+    -moz-appearance: textfield;
+}
+.no-spinners::-webkit-outer-spin-button, .no-spinners::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.pagination {
+    float: none !important;
+}
+.pagination-desc {
+    margin-right: 10px;
+}
+.dr-loader-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.dr-loader {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+@media (min-width: map-get($bs-breakpoints, sm)) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: map-get($bs-breakpoints, md)) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: map-get($bs-breakpoints, lg)) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.dr-legal-footer {
+  a {
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    color: #000;
+    line-height: 16px;
+    margin-right: 10px;
+    text-decoration: underline;
+  }
+  .dr-resellerDisclosure {
+    margin-right: 0;
+  }
+}
+
+.data-table {
+    clear: both;
+    width: 100%;
+    overflow: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+
+    thead > tr > th, tbody > tr > th, thead > tr > td, tbody > tr > td {
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #F9F9F9;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        white-space: nowrap;
+        font-weight: bold;
+        padding: 8px 10px 8px 5px;
+    }
+
+    td {
+        background-color: rgb(255, 255, 255);
+        text-align: left;
+        vertical-align: top;
+        padding: 5px 10px 5px 5px;
+    }
+
+    th:last-child {
+        border-right: 0px;
+    }
+}
+/* Minicart
+------------------------------------------------------------------------*/
+#dr-minicart {
+    .dr-minicart {
+        &-display {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            text-align: left;
+            top: 61px;
+            right: 0;
+            width: 330px;
+            min-height: 300px;
+            max-height: 400px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            font-size: 18px;
+        }
+        &-header, &-body, &-footer {
+            padding: 0 10px;
+        }
+        &-header {
+            padding: 1rem 0 1rem 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        &-body {
+            flex: 1 1 auto;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            overflow-y: auto;
+            max-height: 15rem;
+        }
+        &-footer {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-top: 1px solid #eee;
+        }
+        &-footer a {
+            display: block;
+            float: left;
+            width: 48%;
+            text-align: center;
+
+            position: relative;
+            font-family: 'Open Sans',sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            border: 0;
+            padding: 13px;
+
+            &:first-child {
+                margin-right: 2%;
+                background: #fff;
+                color: #222;
+                border: 1px solid #222;
+            }
+            &:last-child {
+                color: #fff;
+                background: #50B033;
+                margin-left: 2%;
+                &:hover {
+                    background: green;
+                }
+            }
+            &:first-child:last-child {
+              width: 100%;
+              margin: 0;
+              border: none;
+            }
+        }
+        &-title {
+            font-size: 21px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        &-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 26px;
+            padding: 5px;
+            color: #303030;
+            background: none;
+            border: none;
+            outline: none;
+        }
+        &-empty-msg {
+            color: #aaa;
+            margin-top: 30%;
+            text-align: center;
+        }
+        &-subtotal {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: right;
+            margin-top: 10px;
+
+            label {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+        &-list {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            border: none;
+            top: initial;
+            left: initial;
+            opacity: initial;
+            z-index: initial;
+        }
+        &-item {
+            position: relative;
+            display: flex;
+            padding: 10px 0 20px;
+            border-bottom: 1px solid #eee;
+            &:hover {
+                background: none;
+            }
+            &-thumbnail {
+                width: 100px;
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &-info {
+                flex: 1;
+            }
+            &-title {
+                display: block;
+            }
+            &-price {
+                margin-top: 0.5rem;
+            }
+            &-remove-btn {
+                position: absolute;
+                width: auto;
+                right: 5px;
+                bottom: 10px;
+                padding: 0;
+                text-decoration: underline;
+                color: #303030;
+                transition: color 0.4s ease-in-out;
+                &:hover {
+                    color: #a94442;
+                }
+            }
+        }
+    }
+}
+
+body.page-cart #dr-minicart,
+body.page-checkout #dr-minicart,
+body.page-thank-you #dr-minicart {
+    display: none;
+}
+/* PD Items
+------------------------------------------------------------------------*/
+.dr-pd-price {
+    font-weight: 700;
+}
+.dr-strike-price {
+    font-size: 0.85em;
+    font-weight: 400;
+    margin-right: 5px;
+}
+.dr-buy-btn {
+    color: #fff;
+    background-color: nth($brand-colors, 1);
+    border: 1px solid nth($brand-colors, 1);
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        background-color: lighten(nth($brand-colors, 1), 10%);
+        border-color: lighten(nth($brand-colors, 1), 10%);
+    }
+}
+.dr-pd-list {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 38px 28px;
+    margin-bottom: 30px;
+}
+.dr-pd-item {
+    font-size: 18px;
+    line-height: 0;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 2rem;
+    min-height: 480px;
+    position: relative;
+
+    &:hover {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 25px 20px;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &-thumbnail {
+        margin: 0 auto 25px;
+        img {
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            height: 235px;
+        }
+    }
+
+    &-title {
+        margin-top: 0;
+        padding-top: 0;
+        color: #000;
+        font-family: Open Sans, sans-serif;
+        font-size: 22px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &-price {
+        display: block;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .dr-buy-btn {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: map-get($bs-breakpoints, sm)) {
+    .dr-pd-list {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (min-width: map-get($bs-breakpoints, lg)) {
+    .dr-pd-list {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+/* Single PD Page
+------------------------------------------------------------------------*/
+.dr-pd-thumbnail {
+    img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+.dr-pd-qty-wrapper {
+    display: inline-block;
+    margin-right: 30px;
+}
+.dr-pd-qty-minus, .dr-pd-qty-plus {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#dr-pd-qty {
+    // display: inline-block;
+    // width: 60px;
+    // margin-right: 5px;
+}
+
+input[type=radio] {
+    position: relative;
+    opacity: 1;
+    width: auto;
+    height: auto;
+}
+
+.dr-pd-info {
+    margin-top: 30px;
+}
+@media only screen and (min-width: map-get($bs-breakpoints, sm)) {
+    .single-dr_product {
+        .entry-thumbnail {
+            float: left;
+            width: 50%;
+            padding: 0 15px 50px 50px;
+        }
+        .entry-summary {
+            float: right;
+            width: 50%;
+            padding-left: 15px;
+        }
+    }
+}
+
+/* Cart
+------------------------------------------------------------------------*/
+@import "../sass/_dr-all.scss";

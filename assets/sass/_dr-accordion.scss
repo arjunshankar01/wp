@@ -1,0 +1,58 @@
+.dr-accordion {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    color: $gray-darkest;
+    background-color: #ffffff;
+    background-size: cover;
+    border: none;
+    outline: none;
+
+    &:focus {
+        background: transparent;
+        outline: none;
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__edit {
+        display: none;
+        font-family: Open Sans;
+        font-size: 16px;
+        color: $gray-darkest;
+        font-weight: 600;
+        line-height: 16px;
+        cursor: pointer;
+    }
+
+    .active &,
+    .closed & {
+        border-bottom: 1px solid $gray-lighter;
+    }
+
+    .closed & {
+        &__edit {
+            display: block;
+        }
+    }
+
+    .closed &__edit,
+    .closed  &__name {
+        opacity: 0.5;
+    }
+
+}

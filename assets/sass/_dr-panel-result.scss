@@ -1,0 +1,20 @@
+.dr-panel-result {
+    display: none;
+    width: 100%;
+
+    .dr-checkout__el.active & {
+        display: none;
+    }
+
+    .dr-checkout__el.closed & {
+        display: block;
+    }
+
+    &__text {
+        font-family: Open Sans;
+        font-size: 16px;
+        color: $gray-darkest;
+        opacity: 0.5;
+        padding: 1rem 0;
+    }
+}

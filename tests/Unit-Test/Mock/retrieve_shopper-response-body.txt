@@ -1,0 +1,19 @@
+{
+    "status": 200,
+    "result": {
+        "shopper": {
+            "uri": "https://api.digitalriver.com/v1/shoppers/me",
+            "id": "4343434343",
+            "username": "username",
+            "externalReferenceId": "RefId",
+            "firstName": null,
+            "lastName": null,
+            "emailAddress": "emailAddress",
+            "locale": "en_US",
+            "currency": "USD",
+            "ipAddress": "217.00.32.194",
+            "sendMail": "false",
+            "sendEmail": "false"
+        }
+    }
+}

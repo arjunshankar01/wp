@@ -1,0 +1,6 @@
+{
+    "status": 200,
+    "result": {
+        "session_token": "48E043145978AADB68FCBBDEB536E06C"
+    }
+}

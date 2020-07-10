@@ -1,0 +1,9 @@
+{
+    "status": 200,
+    "result": {
+        "access_token": "42acc9dd3162322cbdb95801d54d600dfaaf743a2127cdd5f79e5636b273f01d6b70f8c37db40c18f59604f09110da9abf2c6e30e718130f6d124a3d58c2f02792a32f9ec4ecf882e4d9d3854d423b08",
+        "token_type": "bearer",
+        "expires_in": 20030,
+        "refresh_token": "42acc9dd3162322cbdb95801d54d600dfaaf743a2127cdd5f79e5636b273f01d101e35dd3720565fac9d775ef9368f45a1ded676c269617e7240a34cf96a3415da9dde76cd95a3ffd7f0fbb715dfc36abbbd7ad50e3e85cc"
+    }
+}

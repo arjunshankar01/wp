@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<phpunit
+	bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	>
+	<testsuites>
+		<testsuite>
+			<directory prefix="test-" suffix=".php">./tests/</directory>
+			<file>test-class-drgc-authenticator.php</file>
+			<file>test-class-drgc-shopper.php</file>
+			<file>test-class-drgc-cart.php</file>
+			<file>test-class-drgc-session.php</file>
+			<file>test-class-drgc-tables.php</file>
+			<file>test-class-drgc-activator.php</file>
+			<file>test-class-drgc-deactivator.php</file>
+		</testsuite>
+	</testsuites>
+</phpunit>

@@ -1,0 +1,40 @@
+{
+    "status": 200,
+    "result": {
+        "lineItems": {
+            "uri": "https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items",
+            "lineItem": [
+                {
+                    "uri": "https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items/16766273610",
+                    "id": 16766273610,
+                    "quantity": 1,
+                    "product": {
+                        "uri": "https://api.digitalriver.com/v1/shoppers/me/products/5104501700",
+                        "parentProduct": {
+                            "uri": "https://api.digitalriver.com/v1/shoppers/me/products/5104501500"
+                        },
+                        "displayName": "Digital River Anti-Virus Plus For PC",
+                        "thumbnailImage": "https://drh1.img.digitalriver.com/DRHM/Storefront/Company/drdod15/images/product/thumbnail/Anti_VirusPlus_Windows_medium.png"
+                    },
+                    "pricing": {
+                        "listPrice": {
+                            "currency": "USD",
+                            "value": 49.99
+                        },
+                        "listPriceWithQuantity": {
+                            "currency": "USD",
+                            "value": 49.99
+                        },
+                        "salePriceWithQuantity": {
+                            "currency": "USD",
+                            "value": 49.99
+                        },
+                        "formattedListPrice": "$49.99",
+                        "formattedListPriceWithQuantity": "$49.99",
+                        "formattedSalePriceWithQuantity": "$49.99"
+                    }
+                }
+            ]
+        }
+    }
+}

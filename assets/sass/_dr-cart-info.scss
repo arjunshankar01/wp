@@ -1,0 +1,49 @@
+.dr-cart-info {
+    padding: 0 16px 32px 16px;
+    text-align: center;
+
+    &__help {
+        font-size: 12px;
+        color: #474747;
+        line-height: 18px;
+
+        @include for-tablet-portrait-up {
+            font-size: 14px;
+        }
+    }
+
+    &__info,
+    &__links a {
+        font-size: 12px;
+        color: #303030;
+        font-weight: 300;
+
+        @include for-tablet-portrait-up {
+            font-size: 14px;
+        }
+    }
+
+    &__help,
+    &__info p {
+        margin-bottom: 19px;
+    }
+
+    &__info {
+        margin-bottom: 32px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__links a {
+        text-decoration: underline;
+        margin: 0 5px;
+        white-space: nowrap;
+    }
+
+    @include for-desktop-up {
+        padding: 0 240px 32px 240px;
+    }
+
+}

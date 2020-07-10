@@ -1,0 +1,349 @@
+.DRElement {
+    padding: 0 10px;
+    color: #888;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+
+    // styles must be defined here for elements embedded in iframe
+    &, &--empty, &--complete, &--invalid {
+        font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        height: 48px;
+    }
+
+    &--complete {
+        color: #69bf29;
+        border-color: #69bf29;
+    }
+
+    &--invalid {
+        color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    &.dr-cloudpay-btn {
+        padding: 0;
+    }
+}
+
+.dr-panel-edit {
+    display: none;
+
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    overflow: hidden;
+
+    .dr-checkout__el.active & {
+        display: block;
+    }
+
+    .dr-checkout__el.closed & {
+        display: none;
+    }
+
+   &__btn {
+       margin-top: 1rem;
+       text-transform: uppercase;
+   }
+
+    &.dr-panel-edit--shipping &__el,
+    &.dr-panel-edit--billing &__el {
+            margin-bottom: 20px;
+    }
+
+    &.dr-panel-edit--shipping &__check,
+    &.dr-panel-edit--billing &__check {
+        .field-text {
+            font-size: 18px;
+            color: $gray-darkest;
+        }
+
+        .field-checkbox {
+            label {
+                font-size: 16px;
+                color: $gray-darkest;
+            }
+        }
+    }
+
+    &.dr-panel-edit--delivery &__el {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .field-radio {
+            position: relative;
+            width: 32%;
+            height: 100%;
+
+        }
+
+        .field-radio input[type=radio] {
+            position: absolute;
+            top: 18px;
+            left: 12px;
+        }
+
+        input[type=radio]:checked ~ label{
+            background-color: transparent;
+          }
+
+        .field-radio label {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            padding: 12px 12px 12px 35px;
+            background-color: $white-smoke;
+            border: 1px solid #cccccc;
+        }
+
+        .field-radio label span {
+            width: 100%;
+            font-size: 16px;
+            color: $gray-darkest;
+
+            &.black {
+                color: $color-text-base;
+            }
+
+            &.smoller {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
+
+
+    }
+
+    &.dr-panel-edit--delivery &__info {
+        width: 100%;
+        background-color: #ebebeb;
+        padding: 1rem 1.3rem;
+        margin-top: 11px;
+
+        .delivery-info {
+            font-size: 16px;
+            color: $gray-darkest;
+
+            margin-bottom: 0;
+        }
+    }
+
+    &.dr-panel-edit--payment &__info {
+        .payment-info {
+            margin-bottom: 0;
+        }
+    }
+
+    &.dr-panel-edit--payment &__el {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid $gray-lighter;
+
+        .credit-card-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            > div {
+                filter: grayscale(100%);
+                transition: all .6s;
+            }
+
+            > div.active {
+                filter: grayscale(0);
+            }
+
+            .amex-icon {
+                width: 43px;
+                height: 25px;
+                background: url("../images/american-express.gif");
+                background-position: center;
+                background-size: cover;
+
+                margin-right: 5px;
+            }
+
+            .dinersclub-icon {
+                width: 40px;
+                height: 29px;
+                background: url("../images/diners-club.gif");
+                background-position: center;
+                background-size: cover;
+
+                margin-right: 5px;
+            }
+
+            .discover-icon {
+                width: 45px;
+                height: 29px;
+                background: url("../images/discover.gif");
+                background-position: center;
+                background-size: cover;
+
+                margin-right: 5px;
+            }
+
+            .jcb-icon {
+                width: 38px;
+                height: 29px;
+                background: url("../images/jcb.gif");
+                background-position: center;
+                background-size: cover;
+
+                margin-right: 5px;
+            }
+
+            .mastercard-icon {
+                width: 43px;
+                height: 25px;
+                background: url("../images/master-card.gif");
+                background-position: center;
+                background-size: cover;
+
+                margin-right: 5px;
+            }
+
+            .visa-icon {
+                width: 43px;
+                height: 25px;
+                background: url("../images/visa.gif");
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        .credit-card-info {
+            margin-top: 25px;
+        }
+
+        .credit-card-info .form-group {
+            float: left;
+        }
+
+        .card-number-wrapper {
+            width: 50%;
+            margin-right: 5%;
+        }
+
+        .card-expiration-wrapper {
+            width: 25%;
+            margin-right: 5%;
+        }
+
+        .card-cvv-wrapper {
+            width: 15%;
+        }
+
+        .field-radio {
+            display: flex;
+            align-items: center;
+
+            label {
+                display: flex;
+                align-items: center;
+                
+                font-size: 14px;
+                color: $color-text-base;
+                line-height: 24px;
+
+                margin-left: 0.5rem;
+                margin-bottom: 0;
+            }
+
+            .credit-card-icon {
+                display: block;
+                width: 34px;
+                height: 34px;
+                background: url("../images/credit-card.svg");
+                background-position: center;
+                background-size: cover;
+
+                margin-right: 0.5rem;
+            }
+
+            .paypal-icon {
+                display: block;
+                width: 34px;
+                height: 22px;
+                background: url("../images/paypal.png");
+                background-position: center;
+                background-size: cover;
+
+                margin-right: 0.5rem;
+            }
+
+            .paypal-credit-small-icon {
+                display: block;
+                width: 33px;
+                height: 22px;
+                background: url("../images/paypal-credit-small.png");
+                background-position: center;
+                background-size: cover;
+
+                margin-right: 0.5rem;
+            }
+
+            .paypal-credit-logo-icon {
+                display: block;
+                width: 86px;
+                height: 22px;
+                background: url("../images/paypal-credit-logo.gif");
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+
+    .required-text {
+        width: 100%;
+        
+        font-size: 12px;
+        color: #d40b00;
+        text-align: right;
+    }
+
+    .error-label {
+        
+        font-size: 16px;
+        color: #ff0d00;
+    }
+
+    .float-container {
+        position: relative;
+
+        & .float-label {
+            position: absolute;
+            left: 1rem;
+            font-size: 14px;
+            color: $gray-border;
+
+            transform-origin: top left;
+            transform: translate(0, 14px) scale(1);
+            transition: all .1s ease-in-out;
+        }
+
+        & .float-field {
+            font-size: 14px;
+        }
+    }
+
+    .float-container.active .float-label {
+        transform: translate(-10px, 0) scale(.75);
+      }
+
+}
+
+.dr-panel-edit:not(.dr-panel-edit--email) {
+    display: none;
+}

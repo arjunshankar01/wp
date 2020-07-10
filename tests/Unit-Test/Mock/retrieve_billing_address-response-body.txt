@@ -1,0 +1,22 @@
+{
+    "status": 200,
+    "result": {
+        "address": {
+            "uri": "https://api.digitalriver.com/v1/shoppers/me/carts/active/billing-address",
+            "id": "billingAddress",
+            "firstName": "Random",
+            "lastName": "Random",
+            "companyName": null,
+            "line1": "House Drive",
+            "line2": "House Drive",
+            "line3": null,
+            "city": "Phoenix",
+            "countrySubdivision": null,
+            "postalCode": "10000",
+            "country": "DE",
+            "countryName": "Germany",
+            "phoneNumber": "6464646464",
+            "emailAddress": "test.email@gmail.com"
+        }
+    }
+}

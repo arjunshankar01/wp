@@ -1,0 +1,19 @@
+//
+
+.dr-check-account {
+    font-family: $font-family-base;
+    color: $color-text-base;
+    margin-bottom: 16px;
+
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__link {
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: underline;
+        color: $color-text-base;
+    }
+}

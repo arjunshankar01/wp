@@ -1,0 +1,229 @@
+.dr-product {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px 0;
+    border-bottom: 1px solid $gray-lightest;
+
+    @include for-tablet-portrait-up {
+        align-items: center;
+    }
+
+    .dr-product-content {
+        display: flex;
+        -webkit-print-color-adjust: exact;
+    }
+
+    &__img {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+
+        margin: 0;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+
+        -webkit-print-color-adjust: exact;
+
+        @include for-tablet-portrait-up {
+            width: 140px;
+            height: 140px;
+            margin: 19px 30px 19px 22px;
+        }
+
+    }
+
+    &__info {
+        .product-name {
+            font-family: $font-family-base;
+            font-size: 12px;
+            color: $color-text-base;
+            font-weight: $font-weight-heavy;
+            line-height: 14px;
+
+            margin-bottom: 48px;
+
+            @include for-tablet-portrait-up {
+                font-size: $font-size-base;
+                line-height: 16px;
+
+                margin-bottom: 16px
+            }
+        }
+
+        .product-color span {
+            font-size: 14px;
+            color: $color-text-base;
+
+            @include for-phone-landscape-down {
+                font-size: 12px;
+            }
+        }
+
+        .product-sku {
+            font-family: $font-family-base;
+            line-height: 16px;
+            font-size: 12px;
+            color: #757575;
+
+            @include for-tablet-portrait-up {
+                font-size: 14px;
+                margin-top: 8px;
+            }
+        }
+
+        .product-qty {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            justify-content: flex-start;
+
+            width: 100%;
+            margin-top: 16px;
+
+            .qty-text {
+                display: none;
+            }
+
+            .product-qty-number {
+                width: 48px;
+                height: 30px;
+                padding: 0px 10px;
+                margin: 0 7px;
+
+                font-family: $font-family-base;
+                font-size: 14px;
+                border: 1px solid $gray-lighter;
+                background-color: $white;
+                background-size: cover;
+                color: $color-text-base;
+                text-align: center;
+
+                @include for-phone-landscape-down {
+                    height: 24px;
+                    border: 1px solid $gray-dark;
+                }
+            }
+
+            .value-button-decrease {
+                display: block;
+                width: 13px;
+                height: 13px;
+                margin-left: 7px;
+                background: url("../images/minus.svg");
+                background-position: center;
+            }
+
+            .value-button-increase {
+                display: block;
+                width: 13px;
+                height: 13px;
+                background: url("../images/plus.svg");
+                background-position: center;
+            }
+
+        }
+    }
+
+    &__price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .regular-price {
+            font-family: $font-family-base;
+            font-size: 14px;
+            color: $gray-darker;
+            line-height: 16px;
+        }
+
+        .sale-price {
+            font-family: $font-family-base;
+            font-size: 18px;
+            color: $color-text-base;
+            font-weight: $font-weight-heavy;
+            text-decoration: none;
+            line-height: 16px;
+
+            margin-bottom: 8px;
+        }
+
+        .remove-icon {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            background: url("../images/garbage.svg");
+            background-position: center;
+            background-size: contain;
+            border: none;
+            background-repeat: no-repeat;
+
+            margin-bottom: 48px;
+            &:hover {
+                background: url("../images/garbage.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+
+    .dr-summary__products & {
+        margin-bottom: 20px;
+        padding: 16px 24px;
+        background-color: $white-smoke;
+        border-bottom: none;
+
+        &__img {
+            width: 100px;
+            height: 100px;
+            margin: 0 15px 0 0;
+        }
+
+        &__info .product-sku {
+            margin-top: 8px;
+        }
+
+        &__info .product-name {
+            margin-bottom: 8px;
+        }
+
+        .qty-text {
+            display: block;
+            font-size: 14px;
+            color: #757575;
+            line-height: 16px;
+        }
+
+        .remove-icon,
+        .value-button-decrease,
+        .value-button-increase,
+        .product-qty-number {
+            display: none;
+        }
+
+    }
+}
+
+.dr-banner {
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+
+    &__content {
+        width: 150px;
+    }
+
+    &__img {
+        flex: 1;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

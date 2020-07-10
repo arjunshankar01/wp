@@ -1,0 +1,19 @@
+{
+    "status": 200,
+    "result": {
+        "order": {
+            "uri": "https://api.digitalriver.com/v1/shoppers/me/orders/14502485510",
+            "id": "14502485510",
+            "submissionDate": "2019-06-06T12:54:36.000Z",
+            "displayName": "New Order",
+            "businessEntityCode": "DR_INC-ENTITY",
+            "pricing": null,
+            "paymentMethod": null,
+            "shippingMethod": null,
+            "orderState": "Submitted",
+            "billingAddress": null,
+            "shippingAddress": null,
+            "lineItems": null
+        }
+    }
+}

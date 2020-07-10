@@ -1,0 +1,181 @@
+//
+// ## Fonts
+//
+$font-family-base: 'Open Sans', sans-serif;
+
+$line-height-base: 16px;
+
+// Headings
+$font-family-h1: $font-family-base;
+$font-family-h2: $font-family-base;
+$font-family-h3: $font-family-base;
+$font-family-h4: $font-family-base;
+$font-family-h5: $font-family-base;
+$font-family-h6: $font-family-base;
+
+// Elements
+$font-family-input: $font-family-base;
+$font-family-label: $font-family-base;
+$font-family-btn: $font-family-base;
+
+//
+// ## Font sizes
+//
+$font-size-base: 16px;   // 16px
+
+// Elements
+$font-size-input: 14px;
+$font-size-label: $font-size-base;
+$font-size-error-label: $font-size-base;
+$font-size-btn: $font-size-base;
+
+//
+// ## Font weight
+//
+$font-weight-base: 300;
+$font-weight-ultrabold: 900;
+$font-weight-heavy: 700;
+$font-weight-bold: 600;
+$font-weight-semibold: 500;
+$font-weight-regular: 400;
+$font-weight-thin: 100;
+
+// Elements
+$font-weight-headings: $font-weight-bold;
+$font-weight-btn: $font-weight-bold;
+$font-weight-input: $font-weight-base;
+$font-weight-label: $font-weight-base;
+
+//
+// ## Font style
+//
+$font-style-normal: normal;
+$font-style-base: $font-style-normal;
+
+// Elements
+$font-style-headings: $font-style-normal;
+$font-style-label: $font-style-normal;
+$font-style-input: $font-style-normal;
+
+//
+// ## Colors
+//
+$white: #ffffff;
+$white-smoke: #f7f7f7;
+$white-semi-transparent: rgba(255, 255, 255, 0.2);
+$cyan: #5ebfd8;
+$blue: #00a7e1;
+$blue-dark: #006e95;
+$blue-semi-transparent: rgba(94, 191, 216, .8);
+$green: #50b033;
+$green-lighter: rgb(115, 207, 88);
+$gray-lightest: #ebebeb;
+$gray-lighter: #d1d1d1 ;
+$gray-light: #c8c8c8;
+$gray:  #6e6e6e;
+$gray-dark: #666666;
+$gray-darker: #595959;
+$gray-darkest: #333333;
+$gray-border: #888888;
+$black: #000000;
+$black-semi-transparent: rgba( 0, 0, 0, .64 );
+$red: #e30b00;
+
+$color-text-base: $black;
+$border-color: $gray-light;
+
+//
+// ## Breakpoints
+//
+$bp-desktop-min: 1200px;
+$bp-tablet-landscape-min: 992px;
+$bp-tablet-portrait-min: 768px;
+$bp-phone-landscape-min: 576px;
+
+$bp-tablet-landscape-max: $bp-desktop-min - 1px;
+$bp-tablet-portrait-max: $bp-tablet-landscape-min - 1px;
+$bp-phone-landscape-max: $bp-tablet-portrait-min - 1px;
+$bp-phone-portrait-max: $bp-phone-landscape-min - 1px;
+
+//
+// ## Media Queries
+//
+
+$mq-for-desktop-up: '(min-width: #{$bp-desktop-min})';
+$mq-for-tablet-landscape-up: '(min-width: #{$bp-tablet-landscape-min})';
+$mq-for-tablet-portrait-up: '(min-width: #{$bp-tablet-portrait-min})';
+$mq-for-phone-landscape-up: '(min-width: #{$bp-phone-landscape-min})';
+
+$mq-for-tablet-landscape-down: '(max-width: #{$bp-tablet-landscape-max})';
+$mq-for-tablet-portrait-down: '(max-width: #{$bp-tablet-portrait-max})';
+$mq-for-phone-landscape-down: '(max-width: #{$bp-phone-landscape-max})';
+
+$mq-for-phone-portrait-only: '(max-width: #{$bp-phone-portrait-max})';
+$mq-for-phone-landscape-only: '(min-width: #{$bp-phone-landscape-min}) and (max-width: #{$bp-phone-landscape-max})';
+$mq-for-tablet-portrait-only: '(min-width: #{$bp-tablet-portrait-min}) and (max-width: #{$bp-tablet-portrait-max})';
+$mq-for-tablet-landscape-only: '(min-width: #{$bp-tablet-landscape-min}) and (max-width: #{$bp-tablet-landscape-max})';
+
+
+
+//
+// Breakpoint mixins
+// ---
+// This allows to write all of the versions of component
+// in the same place and have the media queries sprinkled through where we need them.
+//
+
+//--only
+@mixin for-phone-portrait-only {
+	@media #{$mq-for-phone-portrait-only} { @content; }
+}
+
+@mixin for-phone-landscape-only {
+	@media #{$mq-for-phone-landscape-only} { @content; }
+}
+
+@mixin for-tablet-portrait-only {
+	@media #{$mq-for-tablet-portrait-only} { @content; }
+}
+
+@mixin for-tablet-landscape-only {
+	@media #{$mq-for-tablet-landscape-only} { @content; }
+}
+
+@mixin for-desktop-only {
+	@media #{$mq-for-desktop-only} { @content; }
+}
+
+//--up
+@mixin for-phone-landscape-up {
+	@media #{$mq-for-phone-landscape-up} { @content; }
+}
+
+@mixin for-tablet-portrait-up {
+	@media #{$mq-for-tablet-portrait-up} { @content; }
+}
+
+@mixin for-tablet-landscape-up {
+	@media #{$mq-for-tablet-landscape-up} { @content; }
+}
+
+@mixin for-desktop-up {
+	@media #{$mq-for-desktop-up} { @content; }
+}
+
+//--down
+@mixin for-phone-landscape-down {
+	@media #{$mq-for-phone-landscape-down} { @content; }
+}
+
+@mixin for-tablet-portrait-down {
+	@media #{$mq-for-tablet-portrait-down} { @content; }
+}
+
+@mixin for-tablet-landscape-down {
+	@media #{$mq-for-tablet-landscape-down} { @content; }
+}
+
+@mixin for-desktop-down {
+	@media #{$mq-for-desktop-down} { @content; }
+}
+

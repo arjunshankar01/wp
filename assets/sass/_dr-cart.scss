@@ -1,0 +1,122 @@
+.dr-cart {
+    margin-bottom: 40px;
+
+    &__actions,
+    &__actions-bottom {
+
+        .continue-shopping {
+            font-family: $font-family-base;
+            font-size: $font-size-base;
+            color: $color-text-base;
+            text-decoration: underline;
+            line-height: 16px;
+
+            &:visited {
+
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+
+            }
+        }
+    }
+
+    &__actions-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 32px;
+        margin-bottom: 48px;
+
+        & .continue-shopping {
+            @include for-phone-landscape-down {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 13px;
+        font-size: 16px;
+
+        @include for-desktop-up {
+            flex-direction: row;
+        }
+    }
+
+    &__products {
+        width: 100%;
+        margin-bottom: 32px;
+
+        @include for-desktop-up {
+            width: 60%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__estimate {
+        width: 100%;
+        margin-bottom: 16px;
+        float: right;
+
+        @include for-tablet-portrait-up {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        @include for-desktop-up {
+            width: 32%;
+        }
+    }
+
+    #dr-autoRenewTermsContainer {
+        border: 1px solid #dddddd;
+        margin-top: 20px;
+
+        fieldset {
+            padding: 0;
+            border: none;
+        }
+
+        legend {
+            display: none;
+        }
+
+        h3 {
+            background: #dddddd none repeat scroll 0 0;
+            margin: 0;
+            padding: 10px;
+        }
+
+        #dr-optInAutoRenew {
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .invalid-feedback {
+            font-size: inherit;
+        }
+    }
+}
+
+.dr-currency-toggler {
+    padding: 0 0 16px 0;
+    float: right;
+}
+
+.dr-pd-cart-qty-plus,
+.dr-pd-cart-qty-minus {
+    cursor: pointer;
+
+    &.disabled {
+        cursor: auto;
+    }
+}

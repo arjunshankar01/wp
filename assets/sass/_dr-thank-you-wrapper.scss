@@ -1,0 +1,89 @@
+.dr-thank-you-wrapper {
+    margin-bottom: 5rem;
+
+    .page-title {
+        display: none;
+    }
+
+    #my-subs-btn {
+        width: inherit;
+        float: right;
+        padding: 20px;
+    }
+
+    &__info {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+
+        .subheading {
+            font-size: 24px;
+            color: #00a7e1;
+        }
+
+        .order-number,
+        .order-info {
+            margin-top: 1.5rem;
+        }
+
+        .order-number span {
+            font-size: 18px;
+            color: $gray-darkest;
+            font-weight: 700;
+            line-height: 16px;
+
+        }
+
+        .order-info {
+            > p {
+                font-size: 16px;
+                color: $gray-darkest;
+                margin-bottom: 0;
+            }
+
+            > button {
+                font-size: 16px;
+                color: #00a7e1;
+                text-decoration: none;
+                border: none;
+                background: transparent;
+            }
+        }
+    }
+
+    &__products {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    &__summary {
+        width: 100%;
+        display: flex;
+
+        @include for-phone-landscape-down {
+            flex-direction: column;
+        }
+
+        .order-summary {
+            width: 60%;
+            padding-top: 0;
+
+            @include for-phone-landscape-down {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media print {
+    .page-title {
+        display: block;
+        width: 100%;
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    .print-button {
+        display: none;
+    }
+}

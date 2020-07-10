@@ -1,0 +1,19 @@
+{
+    "status": 200,
+    "result": {
+        "cart": {
+            "uri": "https://api.digitalriver.com/v1/shoppers/me/carts/active",
+            "id": "4343434343",
+            "username": "username",
+            "paymentMethods": null,
+            "applyPaymentMethod": null,
+            "lastName": null,
+            "lineItems": null,
+            "billingAddress": null,
+            "shippingAddress": null,
+            "payment": null,
+            "shippingMethod": null,
+            "shippingOptions": null
+        }
+    }
+}

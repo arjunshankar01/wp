@@ -1,0 +1,14 @@
+{
+    "name": "hr/digital-river-global-commerce",
+    "authors": [
+        {
+            "name": "Digital River"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    }
+}

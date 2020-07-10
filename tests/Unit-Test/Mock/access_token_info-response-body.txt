@@ -1,0 +1,19 @@
+{
+    "status": 200,
+    "result": {
+        "sessionId": 63293199710,
+        "userId": 495174262412,
+        "externalReferenceId": null,
+        "authenticated": "false",
+        "locale": "en_US",
+        "currency": "USD",
+        "cartId": null,
+        "clientIpAddress": "00.79.32.194",
+        "domain": "drh-api-ot10.digitalriverws.net",
+        "expiresIn": 84156,
+        "createdOn": "2019-05-20T09:05:19.000Z",
+        "lastAccessed": "2019-05-20T09:05:19.000Z",
+        "themeId": 38742700,
+        "sessionTag": "113b5340b290b37849bb6ddf58426f41"
+    }
+}

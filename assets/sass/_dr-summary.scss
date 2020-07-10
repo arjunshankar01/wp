@@ -1,0 +1,242 @@
+.dr-summary {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    &--cart {
+        .dr-summary__shipping {
+            padding: 20px 0;
+            border-top: 1px dashed $gray-lighter;
+            border-bottom: 1px solid $gray-lighter;
+        }
+    }
+
+    &--checkout,
+    &--thank-you {
+        width: 100%;
+        margin-bottom: 16px;
+        padding: 20px;
+        float: right;
+        background-color: #ffffff;
+
+        .dr-summary__subtotal {
+            margin-bottom: 24px;
+            padding: 0 24px;
+        }
+
+        .dr-summary__shipping,
+        .dr-summary__tax,
+        .dr-summary__discount {
+            padding: 0 24px;
+        }
+
+        .dr-summary__total {
+            margin-bottom: 0;
+            margin-top: 24px;
+            padding: 24px 24px;
+            background-color: $white-smoke;
+
+        }
+
+        .dr-summary__savings {
+            margin-bottom: 0;
+            padding: 0 24px 24px 24px;
+            background-color: $white-smoke;
+        }
+
+        .item-label,
+        .item-value {
+            font-size: 16px;
+            color: $color-text-base;
+            line-height: 14px;
+
+            margin-bottom: 0;
+        }
+
+        .total-label,
+        .total-value {
+            font-size: 21px;
+            color: $color-text-base;
+            font-weight: 700;
+            line-height: 16px;
+
+            margin-bottom: 0;
+        }
+
+    }
+
+    &--checkout {
+        @include for-desktop-up {
+            width: 46%;
+        }
+    }
+
+    &--thank-you {
+        width: 100%;
+    }
+
+    &__promo-code {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid $gray-lighter;
+
+        .promo-code-toggle {
+            display: inline-block;
+            font-size: 16px;
+            color: $gray;
+            text-decoration: none;
+            line-height: 16px;
+            margin-bottom: 10px;
+        }
+
+        .promo-code-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #promo-code {
+            flex: 1;
+        }
+
+        #apply-promo-code-btn {
+            width: 160px;
+            padding: 16px 0;
+        }
+
+        .invalid-feedback {
+            flex: 0 1 100%;
+        }
+    }
+
+    &__proceed-checkout {
+        margin: 32px 0;
+        text-transform: uppercase;
+    }
+
+    &__shipping,
+    &__subtotal,
+    &__discounted-subtotal,
+    &__savings,
+    &__delivery,
+    &__tax,
+    &__discount,
+    &__total {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 16px;
+
+        -webkit-print-color-adjust: exact;
+
+        @include for-desktop-up {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__shipping {
+        margin-bottom: 16px;
+
+        & .shipping-label {
+            font-size: 14px;
+            line-height: 16px;
+            color: $color-text-base;
+            margin-bottom: 0;
+        }
+
+        & .shipping-value {
+            font-size: 16px;
+            color: $color-text-base;
+            font-weight: 700;
+            line-height: 16px;
+            text-align: right;
+            margin-bottom: 0;
+        }
+    }
+
+    &__subtotal {
+        & .subtotal-label,
+        & .subtotal-value {
+            font-size: 18px;
+            color: $color-text-base;
+            font-weight: 600;
+            line-height: 16px;
+            margin-bottom: 0;
+        }
+
+        & .subtotal-value {
+            text-align: right;
+
+        }
+    }
+
+    &__discounted-subtotal {
+        & .discounted-subtotal-label,
+        & .discounted-subtotal-value {
+            font-size: 18px;
+            color: $color-text-base;
+            font-weight: 600;
+            line-height: 16px;
+            margin-bottom: 0;
+        }
+
+        & .discounted-subtotal-value {
+            text-align: right;
+
+        }
+    }
+
+    &__discount {
+        .discount-label,
+        .discount-value {
+            color: $red;
+            margin-bottom: 0;
+        }
+    }
+
+    &__savings {
+
+        .savings-label,
+        .savings-value {
+            font-size: 16px;
+            color: #e30b00;
+            line-height: 16px;
+            margin-bottom: 0
+        }
+
+        .savings-value {
+            text-align: right;
+        }
+
+        @include for-desktop-up {
+            margin-bottom: 0;
+        }
+    }
+
+    &__delivery {
+        padding: 0 32px;
+    }
+
+    &__delivery .delivery-info {
+        &__icon {
+            display: block;
+            width: 84px;
+            height: 44px;
+            background: url("../images/delivery.svg");
+            background-position: center;
+            background-size: cover;
+
+            transform: scaleX(-1);
+        }
+
+        &__text {
+            font-size: 16px;
+            color: $color-text-base;
+            text-align: right;
+        }
+    }
+
+
+}
